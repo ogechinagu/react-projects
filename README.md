@@ -1,6 +1,6 @@
 # React Projects
 
-This repository contains a collection of React projects that I have worked on as part of my journey to hone and refine my React skills. These hands-on projects, inspired by (John Smilga's)[https://github.com/john-smilga/react-projects] project ideas, serve as an ideal refresher to reinforce my proficiency in React fundamentals.
+This repository contains a collection of React projects that I have worked on as part of my journey to hone and refine my React skills. These hands-on projects, inspired by [John Smilga's](https://github.com/john-smilga/react-projects) project ideas, serve as an ideal refresher to reinforce my proficiency in React fundamentals.
 
 ## Projects
 
