@@ -9,5 +9,9 @@
 }
 
 body {
-  margin: 0;
+  background-color: #F28AB2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
