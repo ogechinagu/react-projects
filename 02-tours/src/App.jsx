@@ -74,7 +74,7 @@ function App() {
               </Heading>
               <Center mt={4} mb={12}>
                 <Button
-                  colorScheme='green'
+                  colorScheme='blue'
                   py={4}
                   px={8}
                   onClick={() => getData()}
