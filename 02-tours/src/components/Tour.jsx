@@ -42,7 +42,7 @@ const Tour = ({ id, image, price, topic, details, data, setData }) => {
       <Stack p={8} spacing='3'>
         <Flex justify={'space-between'}>
           <Heading size='md'>{topic}</Heading>
-          <Badge variant='subtle' colorScheme='blue' py={1} px={4}>
+          <Badge variant='subtle' colorScheme='blue' borderRadius={'5px'} py={1} px={4}>
             ${price}
           </Badge>
         </Flex>
