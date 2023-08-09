@@ -10,10 +10,13 @@ import {
   Text,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 const Tour = ({ id, image, price, topic, details, data, setData }) => {
+  const [showMore, setShowMore] = useState(false);
+
   const removeTour = (id) => {
-    console.log(`remove ${id}`);
+    // console.log(`remove ${id}`);
     const newData = data.filter((tour) => tour.id !== id);
     setData(newData);
   };
@@ -24,6 +27,7 @@ const Tour = ({ id, image, price, topic, details, data, setData }) => {
       pb={12}
       my={8}
       bg={'white'}
+      color={'gray.700'}
       borderRadius={'10px'}
       boxShadow={' rgba(0, 0, 0, 0.1) 0px 10px 50px'}
     >
@@ -42,7 +46,22 @@ const Tour = ({ id, image, price, topic, details, data, setData }) => {
             ${price}
           </Badge>
         </Flex>
-        <Text noOfLines={3}>{details}</Text>
+        <Text as={'span'} noOfLines={showMore ? undefined : 3}>
+          {details}
+        </Text>
+        {details.length > 3 && (
+          <Text
+            fontSize={'12px'}
+            fontWeight={600}
+            cursor={'pointer'}
+            color={'blue.500'}
+            textAlign={'right'}
+            mt={'-10px'}
+            onClick={() => setShowMore(!showMore)}
+          >
+            {showMore ? 'Show less' : 'Show more'}
+          </Text>
+        )}
       </Stack>
 
       <Center>
@@ -63,7 +82,7 @@ const Tour = ({ id, image, price, topic, details, data, setData }) => {
 Tour.propTypes = {
   id: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
   topic: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,

@@ -25,7 +25,7 @@ function App() {
     getData();
   }, []);
 
-  console.log('Data', data);
+  // console.log('Data', data);
 
   return (
     <Box>
@@ -37,9 +37,12 @@ function App() {
         <>
           {data.length > 0 ? (
             <>
-              <Heading mt={8} textAlign={'center'}>
+              <Heading color={'gray.700'} mt={8} textAlign={'center'}>
                 Our Tours
               </Heading>
+              <Center mt={2} mb={12}>
+                <Box bg='blue.500' w={'100px'} h={'4px'}></Box>
+              </Center>
               {data?.map((item) => (
                 <Box key={item.id}>
                   <Tour
